@@ -1,19 +1,65 @@
+
+  var test = false;
+  function pause(){
+    audio.pause();
+    $('#pause').css('display','none');
+    $('#play').css('display','block');
+    test = true;
+  }
+
+  function play(){
+    audio.play();
+    $('#play').css('display','none');
+    $('#pause').css('display','block');
+    test = false;
+
+    function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++ ) {
+            color += letters[Math.floor(Math.random() * 22)];}
+        return color;
+      }
+
+
+    (function ColorLoop (i) {
+         setTimeout(function () {
+            var colormix = getRandomColor();
+            canvasCtx.fillStyle = colormix;
+            canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
+            if (test == true) {
+              return;
+            }
+            ColorLoop(i);
+        }, 100);
+    })(1);
+
+
+
+  }
+
+
+
   function getRandomColor() {
       var letters = '0123456789ABCDEF';
       var color = '#';
       for (var i = 0; i < 6; i++ ) {
           color += letters[Math.floor(Math.random() * 22)];}
-      return color;}
-  var ColorBereich = document.getElementById( 'colorchange' );
+      return color;
+    }
+
+
   (function ColorLoop (i) {
-      setTimeout(function () {
+       setTimeout(function () {
           var colormix = getRandomColor();
-          ColorLoop(i);
           canvasCtx.fillStyle = colormix;
           canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
+          if (test == true) {
+            return;
+          }
+          ColorLoop(i);
       }, 100);
   })(1);
-
 
 
 ///// audio Visualizer /////
@@ -76,16 +122,17 @@
 
     for(let i = 0; i < POINTS; i++) {
       let rel = ~~(i * (POINTS/fftSize)),
-          x = CENTER.x + RADIUS * Math.sin( (i * 2 * Math.PI) / POINTS ),
-          y = CENTER.y + RADIUS * -Math.sin( (i * 2 * Math.PI) / POINTS ),
-          x_2 = CENTER.x + (fbc[rel]) * Math.sin( (i * 2 * Math.PI) / POINTS ),
-          y_2 = CENTER.y + (fbc[rel]) * -Math.cos( (i * 2 * Math.PI) / POINTS );
+          x = CENTER.x + RADIUS * Math.tan( (i * 4 * Math.PI) / POINTS ),
+          y = CENTER.y + RADIUS * -Math.tan( (i * 2 * Math.PI) / POINTS ),
+          x_2 = CENTER.x + (fbc[rel]) * Math.tan( (i * 2 * Math.PI) / POINTS ),
+          y_2 = CENTER.y + (fbc[rel]) * -Math.sin( (i * -2 * Math.PI) / POINTS );
 
       canvasCtx.beginPath();
       canvasCtx.moveTo(x, y);
       canvasCtx.lineTo(x_2, y_2);
       canvasCtx.lineWidth = 4;
-      canvasCtx.strokeStyle = "hsl(" + i + ", 100%, 100%)";
+      //canvasCtx.strokeStyle = "hsl(" + i + ", 100%, 50%)";
+      canvasCtx.strokeStyle = "rgb(255, "+i+", 0)";
       canvasCtx.arc(x,y,10,0,2*Math.PI);
       canvasCtx.stroke();
     }
@@ -103,18 +150,6 @@
     })
   })
   */
-
-  function pause(){
-    audio.pause();
-    $('#pause').css('display','none');
-    $('#play').css('display','block');
-  }
-
-  function play(){
-    audio.play();
-    $('#play').css('display','none');
-    $('#pause').css('display','block');
-  }
 
 
 
