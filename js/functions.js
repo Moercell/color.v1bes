@@ -16,6 +16,9 @@
 
 
 
+
+
+
 ///// audio Visualizer /////
   var AudioContext = window.AudioContext || window.webkitAudioContext;
 
@@ -42,7 +45,22 @@
   audio.crossOrigin = "anonymous";
   audio.preload = "preload";
   audio.autoplay = "autoplay";
-  audio.volume = 0.4;
+
+    var vol = 0.4;
+
+    function volume(x) {
+      if (x == "up") {
+        vol += 0.1;
+        audio.volume = vol;
+      }
+      if (x == "down") {
+        vol -= 0.1;
+        audio.volume = vol;
+      }
+      console.log(vol);
+    }
+
+
 
   source = audioCtx.createMediaElementSource(audio);
   source.connect(analyser);
@@ -93,6 +111,8 @@
     $('#play').css('display','none');
     $('#pause').css('display','block');
   }
+
+
 
 
   draw();
