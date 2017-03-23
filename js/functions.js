@@ -4,7 +4,8 @@
       var letters = '0123456789ABCDEF';
       var color = '#';
       for (var i = 0; i < 6; i++ ) {
-          color += letters[Math.floor(Math.random() * 22)];}
+        color += letters[Math.floor(Math.random() * 22)];
+      }
       return color;
     }
 
@@ -17,6 +18,7 @@
           if (state == true) {
             return;
           }
+          //console.log(colormix);
           ColorLoop(i);
       }, 100);
   })(1);
@@ -106,7 +108,7 @@ function play(){
           var r =   Math.floor(Math.random() * 255) + 1;
           var g =   Math.floor(Math.random() * 255) + 1;
           var b =   Math.floor(Math.random() * 255) + 1;
-          canvasCtx.strokeStyle = "rgb("+r+", "+g+", "+b+")";
+          //canvasCtx.strokeStyle = "rgb("+r+", "+g+", "+b+")";
           rgb();
       }, 1000);
   })(1);
@@ -135,7 +137,7 @@ function play(){
       canvasCtx.moveTo(x, y);
       canvasCtx.lineTo(x_2, y_2);
       canvasCtx.lineWidth = 4; // Width of the lines
-      //canvasCtx.strokeStyle = "hsl(" + i + ", 100%, 50%)"; // rainbow effect
+      canvasCtx.strokeStyle = "hsl(" + i + ", 100%, 100%)"; // rainbow effect
       //canvasCtx.strokeStyle = "rgb(255, "+i+", 0)"; // mix two colors
       canvasCtx.arc(x,y,10,0,2*Math.PI); // bigger Circle and others
       canvasCtx.stroke();
