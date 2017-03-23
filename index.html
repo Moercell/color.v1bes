@@ -5,30 +5,57 @@
     <title></title>
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://use.fontawesome.com/f32bd6dd26.js"></script>
+    <!-- Piwik -->
+    <script type="text/javascript">
+      var _paq = _paq || [];
+      // tracker methods like "setCustomDimension" should be called before "trackPageView"
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="//pivik.v1b.es/";
+        _paq.push(['setTrackerUrl', u+'piwik.php']);
+        _paq.push(['setSiteId', '3']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <!-- End Piwik Code -->
   </head>
   <body>
     <div class="can-wrapper">
+
       <canvas id="c"></canvas>
-    </div>
-    <div class="wrapper">
 
-      <div class="circleMenu">
-        <nav>
-          <ul class="outer">
-            <li><span class="mainBtn"></span>
-              <ul class="inner">
-                <li><i onclick="volume('down')" class="fa fa-minus fa-2x"></i></li>
-                <li><i onclick="play()" id="play" class="fa fa-play fa-2x"></i>
-                    <i onclick="pause()" id="pause" class="fa fa-pause fa-2x"></i>
-                </li>
-                <li><i onclick="volume('up')" class="fa fa-plus fa-2x"></i></li>
-                <li><i onclick="next()" class="fa fa-forward fa-2x"></i></li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-      </div>
+            <div class="circleMenu-wrapper">
+                <div class="circleMenu">
+                  <nav>
+                    <ul class="outer">
+                      <li><span class="mainBtn"></span>
+                        <ul class="inner">
+                          <li><i onclick="volume('down')" class="fa fa-minus fa-2x"></i></li>
+                          <li><i onclick="play()" id="play" class="fa fa-play fa-2x"></i>
+                              <i onclick="pause()" id="pause" class="fa fa-pause fa-2x"></i>
+                          </li>
+                          <li><i onclick="volume('up')" class="fa fa-plus fa-2x"></i></li>
+                          <li><i onclick="next()" class="fa fa-forward fa-2x"></i></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+            </div>
 
+            <div class="settings-wrapper">
+              <div class="settings">
+                <div class="open">
+                  <i id="open" class="fa fa-angle-left fa-2x" aria-hidden="true"></i>
+                  <i id="close" class="fa fa-angle-right fa-2x" aria-hidden="true"></i>
+                </div>
+                <div class="options">
+
+                </div>
+              </div>
+            </div>
 
 
     </div>

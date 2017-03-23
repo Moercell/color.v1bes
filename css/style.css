@@ -2,11 +2,6 @@ body, html {
   margin: 0;
   background-color: #141414; }
 
-.wrapper {
-  position: absolute;
-  bottom: 90px;
-  left: 90px; }
-
 #play {
   display: none; }
 
@@ -29,6 +24,12 @@ body, html {
 
 /* SCSS Vars */
 /* The Circle menu */
+.circleMenu-wrapper {
+  position: absolute;
+  bottom: 90px;
+  left: 90px;
+  z-index: 50; }
+
 .circleMenu, .circleMenu .inner, .circleMenu .inner > li {
   position: absolute;
   left: 50%;
@@ -42,7 +43,7 @@ body, html {
   height: 48px;
   position: relative;
   z-index: 20;
-  background-color: #ffffff;
+  background-color: #1d1d1d;
   -webkit-transition: -webkit-transform .3s ease;
   transition: -webkit-transform .3s ease;
   transition: transform .3s ease;
@@ -72,7 +73,7 @@ body, html {
   display: block;
   width: 48px;
   height: 48px;
-  background-color: #e4e4e4;
+  background-color: #2e2e2e;
   padding: 6px;
   -webkit-transition: width .3s ease, height .3s ease;
   transition: width .3s ease, height .3s ease;
@@ -100,11 +101,11 @@ body, html {
   top: 80%; }
 
 .circleMenu .fa, .circleMenu .inner > li .fa {
-  color: #ffffff; }
+  color: #1d1d1d; }
 
 /* Other stuff */
 body {
-  background-color: #e4e4e4; }
+  background-color: #1d1d1d; }
 
 ul {
   margin: 0;
@@ -113,3 +114,19 @@ ul {
 
 .fa {
   cursor: pointer; }
+
+.settings-wrapper {
+  position: absolute;
+  bottom: 5px;
+  right: 30px; }
+
+.settings {
+  position: absolute;
+  bottom: 20px;
+  height: 200px;
+  width: 500px;
+  background-color: #1d1d1d; }
+  .settings i {
+    color: #ff5a94; }
+  .settings .fa {
+    font-size: 60px; }

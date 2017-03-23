@@ -1201,10 +1201,6 @@ else {
 })(Math);
 
 
-var colormix;
-var hsl;
-var rgb;
-var bar;
 
 ///// Generate random color //////
   function getRandomColor() {
@@ -1220,11 +1216,11 @@ var bar;
   (function ColorLoop (i) {
        setTimeout(function () {
           var colormix = getRandomColor();
-          canvasCtx.fillStyle = colormix;
+          canvasCtx.fillStyle = colormix
           canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
           var colorLegnth = colormix.length;
           if (colorLegnth < 8) {
-            var bar = tinycolor(colormix).spin(180).toString();
+            var bar = tinycolor(colormix).spin(180).brighten(20).saturate(50).toString();
             canvasCtx.strokeStyle = bar;
           }
           if (state == true) {
@@ -1259,7 +1255,7 @@ function play(){
           canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
           var colorLegnth = colormix.length;
           if (colorLegnth < 8) {
-            var bar = tinycolor(colormix).spin(180).toString();
+            var bar = tinycolor(colormix).spin(180).brighten(20).saturate(50).toString();
             canvasCtx.strokeStyle = bar;
           }
           if (state == true) {
@@ -1318,18 +1314,6 @@ function play(){
     }
 // TODO: not supportet in safari
 
-//// random color for Strokes (loop) /////   Try hard!
-  (function rgb () {
-       setTimeout(function () {
-          var r =   Math.floor(Math.random() * 255) + 1;
-          var g =   Math.floor(Math.random() * 255) + 1;
-          var b =   Math.floor(Math.random() * 255) + 1;
-          //canvasCtx.strokeStyle = "rgb("+r+", "+g+", "+b+")";
-          rgb();
-      }, 1000);
-  })(1);
-// TODO: brakes the background-color
-// TODO: Transition effect ??
 
 ///// draw the thing! /////
   source = audioCtx.createMediaElementSource(audio);
@@ -1343,7 +1327,7 @@ function play(){
     for(let i = 0; i < POINTS; i++) {
       let rel = ~~(i * (POINTS/fftSize)),
           x = CENTER.x + RADIUS * Math.sin( (i * 2 * Math.PI) / POINTS ),
-          y = CENTER.y + RADIUS * -Math.sin( (i * 2 * Math.PI) / POINTS ),
+          y = CENTER.y + RADIUS * -Math.cos( (i * 2 * Math.PI) / POINTS ),
           x_2 = CENTER.x + (fbc[rel]) * Math.sin( (i * 2 * Math.PI) / POINTS ),
           y_2 = CENTER.y + (fbc[rel]) * -Math.cos( (i * 2 * Math.PI) / POINTS );
           // TODO:  Editibal math functions for more effects

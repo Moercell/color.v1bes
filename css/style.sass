@@ -2,10 +2,6 @@ body, html
   margin: 0
   background-color: #141414
 
-.wrapper
-  position: absolute
-  bottom: 90px
-  left: 90px
 
 #play
   display: none
@@ -30,14 +26,20 @@ body, html
 
 
 /* SCSS Vars
-$primaryC: #e4e4e4
-$primaryCd: #e4e4e4
+$primaryC: #1d1d1d
+$primaryCd: #2e2e2e
 $primaryL: #ff5a94
-$standard: #ffffff
+$standard: #1d1d1d
 
 $smallWidth: 48px
 
 /* The Circle menu
+.circleMenu-wrapper
+  position: absolute
+  bottom: 90px
+  left: 90px
+  z-index: 50
+
 .circleMenu
   position: absolute
   left: 50%
@@ -122,3 +124,20 @@ ul
 
 .fa
   cursor: pointer
+
+.settings-wrapper
+  position: absolute
+  bottom: 5px
+  right: 30px
+
+.settings
+  position: absolute
+  bottom: 20px
+  height: 200px
+  width: 500px
+  background-color: #1d1d1d
+
+  i
+    color: $primaryL
+  .fa
+    font-size: 60px
