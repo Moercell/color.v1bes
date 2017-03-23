@@ -1,0 +1,98 @@
+body, html {
+  margin: 0;
+  background-color: #141414; }
+
+.wrapper {
+  position: absolute;
+  bottom: 90px;
+  left: 90px; }
+
+#play {
+  display: none; }
+
+/* SCSS Vars */
+/* The Circle menu */
+.circleMenu, .circleMenu .inner, .circleMenu .inner > li {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
+
+.mainBtn {
+  display: block;
+  width: 48px;
+  height: 48px;
+  position: relative;
+  z-index: 20;
+  background-color: #ffffff;
+  -webkit-transition: -webkit-transform .3s ease;
+  transition: -webkit-transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease;
+  border-radius: 100%; }
+  .mainBtn:before, .mainBtn:after {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 30px;
+    background-color: #ff5a94;
+    position: absolute;
+    left: 23px;
+    top: 9px; }
+  .mainBtn:after {
+    width: 30px;
+    height: 2px;
+    left: 9px;
+    top: 23px; }
+
+.circleMenu:hover .mainBtn, .circleMenu .inner:hover .mainBtn, .circleMenu .inner > li:hover .mainBtn {
+  cursor: pointer;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg); }
+
+.circleMenu .inner, .circleMenu .inner > li .inner {
+  display: block;
+  width: 48px;
+  height: 48px;
+  background-color: #4a63bd;
+  padding: 6px;
+  -webkit-transition: width .3s ease, height .3s ease;
+  transition: width .3s ease, height .3s ease;
+  border-radius: 100%; }
+
+.circleMenu:hover .inner, .circleMenu .inner:hover .inner, .circleMenu .inner > li:hover .inner {
+  width: 150px;
+  height: 150px; }
+
+.circleMenu .inner > li, .circleMenu .inner .inner > li {
+  z-index: 10;
+  -webkit-transition: left .3s ease, top .3s ease;
+  transition: left .3s ease, top .3s ease; }
+
+.circleMenu:hover .inner > li:nth-child(1), .circleMenu .inner:hover .inner > li:nth-child(1), .circleMenu .inner > li:hover .inner > li:nth-child(1) {
+  left: 20%; }
+
+.circleMenu:hover .inner > li:nth-child(2), .circleMenu .inner:hover .inner > li:nth-child(2), .circleMenu .inner > li:hover .inner > li:nth-child(2) {
+  top: 20%; }
+
+.circleMenu:hover .inner > li:nth-child(3), .circleMenu .inner:hover .inner > li:nth-child(3), .circleMenu .inner > li:hover .inner > li:nth-child(3) {
+  left: 80%; }
+
+.circleMenu:hover .inner > li:nth-child(4), .circleMenu .inner:hover .inner > li:nth-child(4), .circleMenu .inner > li:hover .inner > li:nth-child(4) {
+  top: 80%; }
+
+.circleMenu .fa, .circleMenu .inner > li .fa {
+  color: #ffffff; }
+
+/* Other stuff */
+body {
+  background-color: #637bef; }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
+.fa {
+  cursor: pointer; }

@@ -1,0 +1,107 @@
+body, html
+  margin: 0
+  background-color: #141414
+
+.wrapper
+  position: absolute
+  bottom: 90px
+  left: 90px
+
+#play
+  display: none
+
+
+
+/* SCSS Vars
+$primaryC: #637bef
+$primaryCd: #4a63bd
+$primaryL: #ff5a94
+$standard: #ffffff
+
+$smallWidth: 48px
+
+/* The Circle menu
+.circleMenu
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+
+.mainBtn
+  display: block
+  width: $smallWidth
+  height: $smallWidth
+  position: relative
+  z-index: 20
+  background-color: $standard
+  transition: transform .3s ease
+  border-radius: 100%
+
+  &:before,
+  &:after
+    content: ''
+    display: block
+    width: 2px
+    height: 30px
+    background-color: $primaryL
+    position: absolute
+    left: 23px
+    top: 9px
+
+  &:after
+    width: 30px
+    height: 2px
+    left: 9px
+    top: 23px
+
+.circleMenu:hover .mainBtn
+  cursor: pointer
+  transform: rotate(45deg)
+
+.circleMenu .inner
+  display: block
+  width: $smallWidth
+  height: $smallWidth
+  background-color: $primaryCd
+  padding: 6px
+  transition: width .3s ease, height .3s ease
+  border-radius: 100%
+
+  @extend .circleMenu
+
+.circleMenu:hover .inner
+  width: 150px
+  height: 150px
+
+.circleMenu .inner > li
+  @extend .circleMenu
+
+  z-index: 10
+  transition: left .3s ease, top .3s ease
+
+.circleMenu:hover .inner > li:nth-child(1)
+  left: 20%
+
+.circleMenu:hover .inner > li:nth-child(2)
+  top: 20%
+
+.circleMenu:hover .inner > li:nth-child(3)
+  left: 80%
+
+.circleMenu:hover .inner > li:nth-child(4)
+  top: 80%
+
+.circleMenu .fa
+  color: $standard
+
+/* Other stuff
+body
+  background-color: $primaryC
+
+ul
+  margin: 0
+  padding: 0
+  list-style-type: none
+
+.fa
+  cursor: pointer

@@ -9,36 +9,74 @@
 	],
 "creatorBuild": "25704",
 "files": {
+	"\/CSS\/style.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/CSS\/style-min.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/CSS\/style.sass": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 2,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/style.css",
+		"oF": 2,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/index.html": {
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/index.html",
 		"oF": 0
 		},
-	"\/style-min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
+	"\/js\/functions-min.js": {
+		"ft": 64,
+		"mi": 1,
 		"oA": 0,
-		"oAP": "\/style-min-min.css",
+		"oAP": "\/js\/functions-min-min.js",
 		"oF": 0,
-		"oS": 0
+		"sC": 1,
+		"tS": 0
 		},
-	"\/style.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/style-min.css",
+	"\/js\/functions.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/js\/functions-min.js",
+		"oF": 1,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/js\/jquery-2.1.4.min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/js\/jquery-2.1.4.min-min.js",
 		"oF": 0,
-		"oS": 0
+		"sC": 1,
+		"tS": 0
 		}
 	},
 "hooks": [
 	],
 "manualImportLinks": {
+	"\/js\/functions.js": [
+		{
+			"followForSyntaxChecking": 0,
+			"linkedFileAbbreviatedPath": "\/js\/jquery-2.1.4.min.js",
+			"position": 0,
+			"type": 0
+			}
+		]
 	},
 "projectAttributes": {
 	"creationDate": 511920372,
@@ -1440,7 +1478,7 @@
 			"flagValue": -1
 			},
 		"devel": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"dojo": {
@@ -1676,11 +1714,11 @@
 			"flagValue": -1
 			},
 		"undef": {
-			"active": 1,
+			"active": 0,
 			"flagValue": -1
 			},
 		"unused": {
-			"active": 1,
+			"active": 0,
 			"flagValue": -1
 			},
 		"varstmt": {
