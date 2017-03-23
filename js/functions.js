@@ -1,3 +1,7 @@
+var colormix;
+var hsl;
+var rgb;
+var bar;
 
 ///// Generate random color //////
   function getRandomColor() {
@@ -15,10 +19,14 @@
           var colormix = getRandomColor();
           canvasCtx.fillStyle = colormix;
           canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
+          var colorLegnth = colormix.length;
+          if (colorLegnth < 8) {
+            var bar = tinycolor(colormix).spin(180).toString();
+            canvasCtx.strokeStyle = bar;
+          }
           if (state == true) {
             return;
           }
-          //console.log(colormix);
           ColorLoop(i);
       }, 100);
   })(1);
@@ -46,6 +54,11 @@ function play(){
           var colormix = getRandomColor();
           canvasCtx.fillStyle = colormix;
           canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
+          var colorLegnth = colormix.length;
+          if (colorLegnth < 8) {
+            var bar = tinycolor(colormix).spin(180).toString();
+            canvasCtx.strokeStyle = bar;
+          }
           if (state == true) {
             return;
           }
@@ -137,7 +150,7 @@ function play(){
       canvasCtx.moveTo(x, y);
       canvasCtx.lineTo(x_2, y_2);
       canvasCtx.lineWidth = 4; // Width of the lines
-      canvasCtx.strokeStyle = "hsl(" + i + ", 100%, 100%)"; // rainbow effect
+      //canvasCtx.strokeStyle = "hsl(" + i + ", 100%, 100%)"; // rainbow effect
       //canvasCtx.strokeStyle = "rgb(255, "+i+", 0)"; // mix two colors
       canvasCtx.arc(x,y,10,0,2*Math.PI); // bigger Circle and others
       canvasCtx.stroke();

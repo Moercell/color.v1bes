@@ -65,6 +65,24 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/js\/tinycolor-min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/tinycolor-min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/js\/tinycolor.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/js\/tinycolor-min.js",
+		"oF": 1,
+		"sC": 0,
+		"tS": 0
+		},
 	"\/stars1.mp3": {
 		"ft": 8192,
 		"oA": 2,
@@ -104,6 +122,12 @@
 			"followForSyntaxChecking": 0,
 			"linkedFileAbbreviatedPath": "\/js\/jquery-2.1.4.min.js",
 			"position": 0,
+			"type": 0
+			},
+		{
+			"followForSyntaxChecking": 0,
+			"linkedFileAbbreviatedPath": "\/js\/tinycolor.js",
+			"position": 1,
 			"type": 0
 			}
 		]
