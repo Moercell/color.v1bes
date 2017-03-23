@@ -55,7 +55,7 @@ body, html {
   display: block;
   width: 48px;
   height: 48px;
-  background-color: #000000;
+  background-color: #e4e4e4;
   padding: 6px;
   -webkit-transition: width .3s ease, height .3s ease;
   transition: width .3s ease, height .3s ease;
@@ -87,7 +87,7 @@ body, html {
 
 /* Other stuff */
 body {
-  background-color: #000000; }
+  background-color: #e4e4e4; }
 
 ul {
   margin: 0;

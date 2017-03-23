@@ -16,9 +16,6 @@
 
 
 
-
-
-
 ///// audio Visualizer /////
   var AudioContext = window.AudioContext || window.webkitAudioContext;
 
@@ -40,7 +37,14 @@
           y: HEIGHT/2
         };
 
-  audio.src = "http://audios-api.herokuapp.com/KDrew%20-%20Bullseye.mp3";
+  audio.src = '../stars1.mp3';
+  var song = 1;
+
+  function next() {
+      song ++;
+      audio.src = '../stars' + song + '.mp3';
+  }
+
   audio.type = "audio/mpeg";
   audio.crossOrigin = "anonymous";
   audio.preload = "preload";

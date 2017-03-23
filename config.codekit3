@@ -64,6 +64,36 @@
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
+		},
+	"\/stars1.mp3": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/stars1.mp3",
+		"oF": 0
+		},
+	"\/stars2.mp3": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/stars2.mp3",
+		"oF": 0
+		},
+	"\/stars3.mp3": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/stars3.mp3",
+		"oF": 0
+		},
+	"\/stars4.mp3": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/stars4.mp3",
+		"oF": 0
+		},
+	"\/stars5.mp3": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/stars5.mp3",
+		"oF": 0
 		}
 	},
 "hooks": [
