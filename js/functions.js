@@ -37,7 +37,7 @@ function pause(){
   $('#play').css('display','block');
   state = true;
 }
-
+//
 ///// Play button /////
 function play(){
   audio.play();
