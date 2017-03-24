@@ -1,4 +1,4 @@
-
+//test//
 ///// Generate random color //////
   function getRandomColor() {
       var letters = '0123456789ABCDEF';
