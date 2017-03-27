@@ -9,18 +9,18 @@
 	],
 "creatorBuild": "25704",
 "files": {
-	"\/CSS\/style.css": {
+	"\/css\/style.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/CSS\/style-min.css",
+		"oAP": "\/css\/style-min.css",
 		"oF": 0,
 		"oS": 0
 		},
-	"\/CSS\/style.sass": {
-		"aP": 1,
+	"\/css\/style.sass": {
+		"aP": 0,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -28,7 +28,7 @@
 		"ma": 0,
 		"oA": 0,
 		"oAP": "\/css\/style.css",
-		"oF": 2,
+		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
