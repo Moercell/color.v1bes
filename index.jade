@@ -1,0 +1,98 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title
+    link(rel='stylesheet', href='css/style.css')
+    script(src='https://use.fontawesome.com/f32bd6dd26.js')
+    // Piwik
+    script(type='text/javascript').
+      var _paq = _paq || [];
+      // tracker methods like "setCustomDimension" should be called before "trackPageView"
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+      var u="//pivik.v1b.es/";
+      _paq.push(['setTrackerUrl', u+'piwik.php']);
+      _paq.push(['setSiteId', '3']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+      })();
+    // End Piwik Code
+  body
+    .can-wrapper
+      canvas#c
+      .circleMenu-wrapper
+        .circleMenu
+          nav
+            ul.outer
+              li
+                span.mainBtn
+                ul.inner
+                  li
+                    i.fa.fa-minus.fa-2x(onclick="volume('down')")
+                  li
+                    i#play.fa.fa-play.fa-2x(onclick='play()')
+                    i#pause.fa.fa-pause.fa-2x(onclick='pause()')
+                  li
+                    i.fa.fa-plus.fa-2x(onclick="volume('up')")
+                  li
+                    i.fa.fa-forward.fa-2x(onclick='next()')
+                    
+                    
+      .settings-wrapper
+        .settings
+        
+          .open
+            i#open.fa.fa-angle-left.fa-2x(aria-hidden='true')
+            i#close.fa.fa-angle-right.fa-2x(aria-hidden='true')
+            
+          .options
+            p
+              | x = CENTER.x + RADIUS *
+              select#funk1.funk(onchange='change()', name='funk1')
+                option(value='Math.sin') sin
+                option(value='Math.cos') cos
+                option(value='Math.tan') tan
+              |                     ((i * 
+              input#val1(onkeydown='change()', type='number', name='val1', value='2')
+              |  * PI) / POINTS)
+            p
+              | y = CENTER.y + RADIUS * -
+              select#funk2.funk(onchange='change()', name='funk2')
+                option(value='Math.cos') cos
+                option(value='Math.sin') sin
+                option(value='Math.tan') tan
+              |                     ((i * 
+              input#val2(onkeydown='change()', type='number', name='val2', value='2')
+              |  * PI) / POINTS)
+            p
+              | x2 = CENTER.x + (audio) *
+              select#funk3.funk(onchange='change()', name='funk3')
+                option(value='Math.sin') sin
+                option(value='Math.cos') cos
+                option(value='Math.tan') tan
+              |                     ((i * 
+              input#val3(onkeydown='change()', type='number', name='val3', value='2')
+              |  * PI) / POINTS)
+            p
+              | y2 = CENTER.y + (audio) * -
+              select#funk4.funk(onchange='change()', name='funk4')
+                option(value='Math.cos') cos
+                option(value='Math.sin') sin
+                option(value='Math.tan') tan
+              |                     ((i * 
+              input#val4(onkeydown='change()', type='number', name='val4', value='2')
+              |  * PI) / POINTS)
+            .second
+              p
+                | RADIUS = 
+                input#rad(onkeydown='changeRad()', type='number', name='rad1', value='80')
+                br
+                | POINTS = 
+                input#points(onkeydown='changeRad()', type='number', name='rad1', value='180')
+                
+          .choose
+
+
+    script(src='js/functions-min.js', type='text/javascript')

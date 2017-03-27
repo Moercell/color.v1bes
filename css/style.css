@@ -15,8 +15,7 @@ body, html {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   padding-bottom: 100%;
   border-radius: 50%;
   width: 115%;
@@ -35,8 +34,7 @@ body, html {
   position: absolute;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%); }
+  transform: translate(-50%, -50%); }
 
 .mainBtn {
   display: block;
@@ -45,10 +43,7 @@ body, html {
   position: relative;
   z-index: 20;
   background-color: #1d1d1d;
-  -webkit-transition: -webkit-transform .3s ease;
-  transition: -webkit-transform .3s ease;
   transition: transform .3s ease;
-  transition: transform .3s ease, -webkit-transform .3s ease;
   border-radius: 100%; }
   .mainBtn:before, .mainBtn:after {
     content: '';
@@ -67,8 +62,7 @@ body, html {
 
 .circleMenu:hover .mainBtn, .circleMenu .inner:hover .mainBtn, .circleMenu .inner > li:hover .mainBtn {
   cursor: pointer;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg); }
+  transform: rotate(45deg); }
 
 .circleMenu .inner, .circleMenu .inner > li .inner {
   display: block;
@@ -76,7 +70,6 @@ body, html {
   height: 48px;
   background-color: #2e2e2e;
   padding: 6px;
-  -webkit-transition: width .3s ease, height .3s ease;
   transition: width .3s ease, height .3s ease;
   border-radius: 100%; }
 
@@ -86,7 +79,6 @@ body, html {
 
 .circleMenu .inner > li, .circleMenu .inner .inner > li {
   z-index: 10;
-  -webkit-transition: left .3s ease, top .3s ease;
   transition: left .3s ease, top .3s ease; }
 
 .circleMenu:hover .inner > li:nth-child(1), .circleMenu .inner:hover .inner > li:nth-child(1), .circleMenu .inner > li:hover .inner > li:nth-child(1) {
@@ -122,7 +114,6 @@ ul {
   right: 30px;
   left: auto;
   z-index: 20;
-  -webkit-transition: 600ms;
   transition: 600ms; }
 
 .settings {
@@ -132,6 +123,8 @@ ul {
   width: 100vw;
   background-color: #1d1d1d;
   padding: 5px; }
+  .settings .open {
+    width: 30px; }
   .settings i {
     color: #ff5a94;
     line-height: 200px;
@@ -162,3 +155,11 @@ ul {
     .settings .options option {
       background: #222;
       border-top: 1px solid #444; }
+  .settings .choose {
+    background-color: #383838;
+    width: calc(38% - 10px);
+    height: calc(100% - 20px);
+    position: absolute;
+    left: 600px;
+    top: 10px;
+    border-radius: 5px; }
