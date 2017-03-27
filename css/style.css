@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Inconsolata");
 body, html {
   margin: 0;
   background-color: #141414; }
@@ -26,7 +27,7 @@ body, html {
 /* The Circle menu */
 .circleMenu-wrapper {
   position: absolute;
-  bottom: 90px;
+  top: 90px;
   left: 90px;
   z-index: 50; }
 
@@ -118,15 +119,46 @@ ul {
 .settings-wrapper {
   position: absolute;
   bottom: 5px;
-  right: 30px; }
+  right: 30px;
+  left: auto;
+  z-index: 20;
+  -webkit-transition: 600ms;
+  transition: 600ms; }
 
 .settings {
   position: absolute;
   bottom: 20px;
   height: 200px;
-  width: 500px;
-  background-color: #1d1d1d; }
+  width: 100vw;
+  background-color: #1d1d1d;
+  padding: 5px; }
   .settings i {
-    color: #ff5a94; }
+    color: #ff5a94;
+    line-height: 200px;
+    width: 30px; }
   .settings .fa {
     font-size: 60px; }
+  .settings #close {
+    display: none; }
+  .settings .options {
+    position: absolute;
+    top: 0;
+    left: 70px; }
+    .settings .options p {
+      color: #808080;
+      font-family: 'Inconsolata', monospace; }
+    .settings .options input[type=number], .settings .options select {
+      background-color: #383838;
+      border: none;
+      border-radius: 3px;
+      text-align: center;
+      width: 50px;
+      color: #808080;
+      font-family: 'Inconsolata', monospace; }
+      .settings .options input[type=number]:focus, .settings .options select:focus {
+        border: 1px solid #ff5a94;
+        box-shadow: 0 0 5px #ff5a94;
+        outline: #ff5a94; }
+    .settings .options option {
+      background: #222;
+      border-top: 1px solid #444; }

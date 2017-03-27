@@ -25,7 +25,6 @@
     <div class="can-wrapper">
 
       <canvas id="c"></canvas>
-
             <div class="circleMenu-wrapper">
                 <div class="circleMenu">
                   <nav>
@@ -51,7 +50,56 @@
                   <i id="open" class="fa fa-angle-left fa-2x" aria-hidden="true"></i>
                   <i id="close" class="fa fa-angle-right fa-2x" aria-hidden="true"></i>
                 </div>
+
                 <div class="options">
+
+                  <p>
+                    x = CENTER.x + RADIUS *
+                    <select id="funk1" onchange="change()" class="funk" name="funk1">
+                      <option value="Math.sin">sin</option>
+                      <option value="Math.cos">cos</option>
+                      <option value="Math.tan">tan</option>
+                    </select>
+                    ((i * <input id="val1" onkeydown="change()" type="number" name="val1" value="2"> * PI) / POINTS)
+                  </p>
+
+                  <p>
+                    y = CENTER.y + RADIUS * -
+                    <select id="funk2" onchange="change()" class="funk" name="funk2">
+                      <option value="Math.cos">cos</option>
+                      <option value="Math.sin">sin</option>
+                      <option value="Math.tan">tan</option>
+                    </select>
+                    ((i * <input id="val2" onkeydown="change()" type="number" name="val2" value="2"> * PI) / POINTS)
+                  </p>
+
+                  <p>
+                    x2 = CENTER.x + (audio) *
+                    <select id="funk3" onchange="change()" class="funk" name="funk3">
+                      <option value="Math.sin">sin</option>
+                      <option value="Math.cos">cos</option>
+                      <option value="Math.tan">tan</option>
+                    </select>
+                    ((i * <input id="val3" onkeydown="change()" type="number" name="val3" value="2"> * PI) / POINTS)
+                  </p>
+
+                  <p>
+                    y2 = CENTER.y + (audio) * -
+                    <select id="funk4" onchange="change()" class="funk" name="funk4">
+                      <option value="Math.cos">cos</option>
+                      <option value="Math.sin">sin</option>
+                      <option value="Math.tan">tan</option>
+                    </select>
+                    ((i * <input id="val4" onkeydown="change()" type="number" name="val4" value="2"> * PI) / POINTS)
+                  </p>
+
+                  <div class="second">
+                    <p>
+                      RADIUS = <input id="rad" onkeydown="changeRad()" type="number" name="rad1" value="80">
+                      <br />
+                      POINTS = <input id="points" onkeydown="changeRad()" type="number" name="rad1" value="180">
+                    </p>
+                  </div>
 
                 </div>
               </div>

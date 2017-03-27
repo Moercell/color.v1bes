@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata')
+
 body, html
   margin: 0
   background-color: #141414
@@ -36,7 +38,7 @@ $smallWidth: 48px
 /* The Circle menu
 .circleMenu-wrapper
   position: absolute
-  bottom: 90px
+  top: 90px
   left: 90px
   z-index: 50
 
@@ -129,15 +131,50 @@ ul
   position: absolute
   bottom: 5px
   right: 30px
+  left: auto
+  z-index: 20
+  transition: 600ms
 
 .settings
   position: absolute
   bottom: 20px
   height: 200px
-  width: 500px
+  width: 100vw
   background-color: #1d1d1d
+  padding: 5px
 
   i
     color: $primaryL
+    line-height: 200px
+    width: 30px
   .fa
     font-size: 60px
+
+  #close
+    display: none
+
+  .options
+    position: absolute
+    top: 0
+    left: 70px
+
+    p
+      color: #808080
+      font-family: 'Inconsolata', monospace
+
+    input[type=number], select
+      background-color: #383838
+      border: none
+      border-radius: 3px
+      text-align: center
+      width: 50px
+      color: #808080
+      font-family: 'Inconsolata', monospace
+      &:focus
+        border: 1px solid $primaryL
+        box-shadow: 0 0 5px $primaryL
+        outline: $primaryL
+
+    option
+      background: #222
+      border-top: 1px solid #444
