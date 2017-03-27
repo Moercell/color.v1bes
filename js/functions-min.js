@@ -1304,6 +1304,7 @@ function play(){
 
 ///// Volume controle /////
     var vol = 0.4;
+    audio.volume = vol;
     function volume(x) {
       if (x == "up") {
         vol += 0.1;
