@@ -104,22 +104,20 @@ function play(){
     audio.volume = vol;
     function volume(x) {
       if (x == "up") {
-        vol += 0.1;
-        vol = Math.round( vol * 10 ) / 10;
+        vol += 0.05;
+        vol = Math.round( vol * 100 ) / 100;
         if (vol >= 1) {
           vol = 1;
         }
         audio.volume = vol;
-        console.log(vol);
       }
       if (x == "down") {
-        vol -= 0.1;
-        vol = Math.round( vol * 10 ) / 10;
+        vol -= 0.05;
+        vol = Math.round( vol * 100 ) / 100;
         if (vol <= 0) {
           vol = 0;
         }
         audio.volume = vol;
-        console.log(vol);
       }
     }
 // TODO: not supportet in safari
