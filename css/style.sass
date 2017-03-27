@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata')
+
 body, html
   margin: 0
   background-color: #141414
@@ -150,3 +152,29 @@ ul
 
   #close
     display: none
+
+  .options
+    position: absolute
+    top: 0
+    left: 70px
+
+    p
+      color: #808080
+      font-family: 'Inconsolata', monospace
+
+    input[type=number], select
+      background-color: #383838
+      border: none
+      border-radius: 3px
+      text-align: center
+      width: 50px
+      color: #808080
+      font-family: 'Inconsolata', monospace
+      &:focus
+        border: 1px solid $primaryL
+        box-shadow: 0 0 5px $primaryL
+        outline: $primaryL
+
+    option
+      background: #222
+      border-top: 1px solid #444

@@ -63,6 +63,7 @@ function play(){
   })(1);
 }
 
+
 ///// audio Visualizer /////
   var AudioContext = window.AudioContext || window.webkitAudioContext;
   let audio = new Audio(),
@@ -82,6 +83,7 @@ function play(){
           x: WIDTH/2,
           y: HEIGHT/2
         };
+
 
 ///// Linke the src for music /////
   audio.src = '../stars1.mp3';
@@ -122,6 +124,67 @@ var val2 = 2;
 var val3 = 2;
 var val4 = 2;
 
+//// change values function ////
+
+function change() {
+  funk1 = document.getElementById('funk1').value;
+    if (funk1 == "Math.sin") {
+      funk1 = Math.sin
+    }
+    if (funk1 == "Math.cos") {
+      funk1 = Math.cos
+    }
+    if (funk1 == "Math.tan") {
+      funk1 = Math.tan
+    }
+
+  funk2 = document.getElementById('funk2').value;
+    if (funk2 == "Math.sin") {
+      funk2 = Math.sin
+    }
+    if (funk2 == "Math.cos") {
+      funk2 = Math.cos
+    }
+    if (funk2 == "Math.tan") {
+      funk2 = Math.tan
+    }
+
+  funk3 = document.getElementById('funk3').value;
+    if (funk3 == "Math.sin") {
+      funk3 = Math.sin
+    }
+    if (funk3 == "Math.cos") {
+      funk3 = Math.cos
+    }
+    if (funk3 == "Math.tan") {
+      funk3 = Math.tan
+    }
+
+  funk4 = document.getElementById('funk4').value;
+    if (funk4 == "Math.sin") {
+      funk4 = Math.sin
+    }
+    if (funk4 == "Math.cos") {
+      funk4 = Math.cos
+    }
+    if (funk4 == "Math.tan") {
+      funk4 = Math.tan
+    }
+
+  val1 = document.getElementById('val1').value;
+  val2 = document.getElementById('val2').value;
+  val3 = document.getElementById('val3').value;
+  val4 = document.getElementById('val4').value;
+
+}
+
+var radi = 80;
+var poin = 180;
+function changeRad() {
+  radi = document.getElementById('rad').value;
+  poin = document.getElementById('points').value;
+}
+
 
 ///// draw the thing! /////
   source = audioCtx.createMediaElementSource(audio);
@@ -134,10 +197,10 @@ var val4 = 2;
 
     for(let i = 0; i < POINTS; i++) {
       let rel = ~~(i * (POINTS/fftSize)),
-          x = CENTER.x + RADIUS * funk1 ( (i * val1 * Math.PI) / POINTS ),
-          y = CENTER.y + RADIUS * -funk2( (i * val2 * Math.PI) / POINTS ),
-          x_2 = CENTER.x + (fbc[rel]) * funk3( (i * val3 * Math.PI) / POINTS ),
-          y_2 = CENTER.y + (fbc[rel]) * -funk4( (i * val4 * Math.PI) / POINTS );
+          x = CENTER.x + radi * funk1 ( (i * val1 * Math.PI) / poin ),
+          y = CENTER.y + radi * -funk2( (i * val2 * Math.PI) / poin ),
+          x_2 = CENTER.x + (fbc[rel]) * funk3( (i * val3 * Math.PI) / poin ),
+          y_2 = CENTER.y + (fbc[rel]) * -funk4( (i * val4 * Math.PI) / poin );
           // TODO:  Editibal math functions for more effects
           // TODO:  random values for more patterns
 

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Inconsolata");
 body, html {
   margin: 0;
   background-color: #141414; }
@@ -139,3 +140,25 @@ ul {
     font-size: 60px; }
   .settings #close {
     display: none; }
+  .settings .options {
+    position: absolute;
+    top: 0;
+    left: 70px; }
+    .settings .options p {
+      color: #808080;
+      font-family: 'Inconsolata', monospace; }
+    .settings .options input[type=number], .settings .options select {
+      background-color: #383838;
+      border: none;
+      border-radius: 3px;
+      text-align: center;
+      width: 50px;
+      color: #808080;
+      font-family: 'Inconsolata', monospace; }
+      .settings .options input[type=number]:focus, .settings .options select:focus {
+        border: 1px solid #ff5a94;
+        box-shadow: 0 0 5px #ff5a94;
+        outline: #ff5a94; }
+    .settings .options option {
+      background: #222;
+      border-top: 1px solid #444; }
