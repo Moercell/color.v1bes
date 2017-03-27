@@ -1201,7 +1201,7 @@ else {
 })(Math);
 
 
-
+//test//
 ///// Generate random color //////
   function getRandomColor() {
       var letters = '0123456789ABCDEF';
@@ -1240,7 +1240,7 @@ function pause(){
   $('#play').css('display','block');
   state = true;
 }
-
+//
 ///// Play button /////
 function play(){
   audio.play();
@@ -1314,6 +1314,17 @@ function play(){
     }
 // TODO: not supportet in safari
 
+//// Math Variables ////
+var funk1 = Math.sin;
+var funk2 = Math.cos;
+var funk3 = Math.sin;
+var funk4 = Math.cos;
+
+var val1 = 2;
+var val2 = 2;
+var val3 = 2;
+var val4 = 2;
+
 
 ///// draw the thing! /////
   source = audioCtx.createMediaElementSource(audio);
@@ -1326,10 +1337,10 @@ function play(){
 
     for(let i = 0; i < POINTS; i++) {
       let rel = ~~(i * (POINTS/fftSize)),
-          x = CENTER.x + RADIUS * Math.sin( (i * 2 * Math.PI) / POINTS ),
-          y = CENTER.y + RADIUS * -Math.cos( (i * 2 * Math.PI) / POINTS ),
-          x_2 = CENTER.x + (fbc[rel]) * Math.sin( (i * 2 * Math.PI) / POINTS ),
-          y_2 = CENTER.y + (fbc[rel]) * -Math.cos( (i * 2 * Math.PI) / POINTS );
+          x = CENTER.x + RADIUS * funk1 ( (i * val1 * Math.PI) / POINTS ),
+          y = CENTER.y + RADIUS * -funk2( (i * val2 * Math.PI) / POINTS ),
+          x_2 = CENTER.x + (fbc[rel]) * funk3( (i * val3 * Math.PI) / POINTS ),
+          y_2 = CENTER.y + (fbc[rel]) * -funk4( (i * val4 * Math.PI) / POINTS );
           // TODO:  Editibal math functions for more effects
           // TODO:  random values for more patterns
 
@@ -1345,5 +1356,22 @@ function play(){
   }
 
 draw();
+
+
+(function(){
+  $('#open').bind('click', function() {
+    $('.settings-wrapper').css('right', 'calc(100% - 20px)');
+    $('#open').css('display', 'none');
+    $('#close').css('display', 'block')
+  });
+})();
+
+(function(){
+  $('#close').bind('click', function() {
+    $('.settings-wrapper').css('right', '30px');
+    $('#open').css('display', 'block');
+    $('#close').css('display', 'none')
+  });
+})();
 
 
