@@ -1216,6 +1216,8 @@ else {
   (function ColorLoop (i) {
        setTimeout(function () {
           var colormix = getRandomColor();
+
+          //// Darkmode ////
           if($("#dark").is(':checked')){
             canvasCtx.fillStyle = '#000';
           }
@@ -1237,6 +1239,15 @@ else {
   })(1);
 // TODO: Transition effect ??
 
+////  toggle menu ////
+$(document).keypress(function(e) {
+    if(e.which == 49) {
+      $('.circleMenu').toggleClass('none');
+    }
+    if(e.which == 50) {
+      $('.settings').toggleClass('none');
+    }
+});
 
 ///// Pause button /////
 var state = false;  // playe or pause state
