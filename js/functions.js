@@ -1,4 +1,87 @@
 //test//
+
+//// get random number ////
+function ran(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function ranop(x) {
+  if (ran(1, 3) == 1 ) {
+    x = Math.sin;
+  }
+  if (ran(1, 3) == 2 ) {
+    x = Math.cos;
+  }
+  if (ran(1, 3) == 3 ) {
+    x = Math.tan;
+  }
+}
+
+//// Math Variables ////
+
+var funk1 = Math.sin;
+var funk2 = Math.cos;
+var funk3 = Math.sin;
+var funk4 = Math.cos;
+
+var val1 = 2;
+var val2 = 2;
+var val3 = 2;
+var val4 = 2;
+
+
+(function ranloop () {
+  setTimeout(function () {
+    if($("#fuck").is(':checked')){
+      val1 = ran(-20, 20);
+      val2 = ran(-20, 20);
+      val3 = ran(-20, 20);
+      val4 = ran(-20, 20);
+      if (ran(1, 3) == 1 ) {
+        funk1 = Math.sin;
+      }
+      if (ran(1, 3) == 2 ) {
+        funk1 = Math.cos;
+      }
+      if (ran(1, 3) == 3 ) {
+        funk1 = Math.tan;
+      }
+  ////////
+      if (ran(1, 3) == 1 ) {
+        funk2 = Math.sin;
+      }
+      if (ran(1, 3) == 2 ) {
+        funk2 = Math.cos;
+      }
+      if (ran(1, 3) == 3 ) {
+        funk2 = Math.tan;
+      }
+  ////////
+      if (ran(1, 3) == 1 ) {
+        funk3 = Math.sin;
+      }
+      if (ran(1, 3) == 2 ) {
+        funk3 = Math.cos;
+      }
+      if (ran(1, 3) == 3 ) {
+        funk3 = Math.tan;
+      }
+  ////////
+      if (ran(1, 3) == 1 ) {
+        funk4 = Math.sin;
+      }
+      if (ran(1, 3) == 2 ) {
+        funk4 = Math.cos;
+      }
+      if (ran(1, 3) == 3 ) {
+        funk4 = Math.tan;
+      }
+    }
+    ranloop()
+  }, ran(100,  2000));
+})(1);
+
+
 ///// Generate random color //////
   function getRandomColor() {
       var letters = '0123456789ABCDEF';
@@ -139,16 +222,6 @@ function play(){
     }
 // TODO: not supportet in safari
 
-//// Math Variables ////
-var funk1 = Math.sin;
-var funk2 = Math.cos;
-var funk3 = Math.sin;
-var funk4 = Math.cos;
-
-var val1 = 2;
-var val2 = 2;
-var val3 = 2;
-var val4 = 2;
 
 //// change values function ////
 
