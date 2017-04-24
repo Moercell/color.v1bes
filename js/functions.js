@@ -13,7 +13,13 @@
   (function ColorLoop (i) {
        setTimeout(function () {
           var colormix = getRandomColor();
-          canvasCtx.fillStyle = colormix
+          if($("#dark").is(':checked')){
+            canvasCtx.fillStyle = '#000';
+          }
+          else {
+            canvasCtx.fillStyle = colormix;
+          }
+
           canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
           var colorLegnth = colormix.length;
           if (colorLegnth < 8) {
