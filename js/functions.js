@@ -190,6 +190,9 @@ function play(){
   var song = 1;
   function next() { // switch to next song
       song ++;
+      if (song == 7) {
+         song = 1;
+      }
       audio.src = '../stars' + song + '.mp3';
   }
   // TODO: loop the songlist
@@ -314,9 +317,54 @@ function changeRad() {
     }
   }
 
+    /*(function ran2loop () {
+      setTimeout(function () {
+        console.log(fbc[1]);
+        ran2loop()
+      },10000 );
+    })(1);*/
+
 draw();
 
 
+//// loop audiofile /////
+(function loop () {
+  setTimeout(function () {
+    if (state == false) {
+      if (vol > 0) {
+        if (fbc[1] + fbc[50] + fbc[150] + fbc[200] + fbc[250] + fbc[300] == 0) {
+          /// stop
+          if($("#loop").is(':checked')){
+            //loop
+            audio.play();
+          }
+          else {
+            //next
+            next();
+          }
+        }
+        else {
+          /// play
+          //console.log('play');
+        }
+      }
+      else {
+        /// mute
+        //console.log('mute');
+      }
+    }
+    else {
+      /// pause
+      //console.log('pause');
+    }
+    //console.log(fbc[1] + fbc[50] + fbc[150] + fbc[200] + fbc[250] + fbc[300]);
+    loop();
+  },1000 );
+})(1);
+
+
+
+////// open the sidepannel //////
 (function(){
   $('#open').bind('click', function() {
     $('.settings-wrapper').css('right', 'calc(100% - 20px)');
