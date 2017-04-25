@@ -1232,6 +1232,11 @@ var val2 = 2;
 var val3 = 2;
 var val4 = 2;
 
+var radi = 80;
+var poin = 180;
+
+var lwi = 4;
+
 
 (function ranloop () {
   setTimeout(function () {
@@ -1240,6 +1245,9 @@ var val4 = 2;
       val2 = ran(-20, 20);
       val3 = ran(-20, 20);
       val4 = ran(-20, 20);
+      radi = ran(10, 360);
+      poin = ran(40, 360);
+      lwi = ran(1, 6);
       if (ran(1, 3) == 1 ) {
         funk1 = Math.sin;
       }
@@ -1483,8 +1491,6 @@ function change() {
 
 }
 
-var radi = 80;
-var poin = 180;
 function changeRad() {
   radi = document.getElementById('rad').value;
   poin = document.getElementById('points').value;
@@ -1512,7 +1518,7 @@ function changeRad() {
       canvasCtx.beginPath();
       canvasCtx.moveTo(x, y);
       canvasCtx.lineTo(x_2, y_2);
-      canvasCtx.lineWidth = 4; // Width of the lines
+      canvasCtx.lineWidth =  lwi; // Width of the lines
       //canvasCtx.strokeStyle = "hsl(" + i + ", 100%, 100%)"; // rainbow effect
       //canvasCtx.strokeStyle = "rgb(255, "+i+", 0)"; // mix two colors
       canvasCtx.arc(x,y,10,0,2*Math.PI); // bigger Circle and others
